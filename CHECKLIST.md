@@ -46,7 +46,7 @@ _This checklist is intended for internal development planning. For user-facing o
 
 ### Frontend and UI
 - [X] React Vite TypeScript Tailwind frontend
-- [ ] 🚧 Create user stories and interface flow (Figma will be handled by @polinapianina)
+- [ ] 🚧 Create user stories and interface flow (Figma will be handled by [Polina](https://github.com/polinapianina))
 - [ ] Set up Tailwind Theme Config for consistent, modular design
   - [ ] Colors
   - [ ] Spacing
