@@ -46,7 +46,7 @@ _This checklist is intended for internal development planning. For user-facing o
 
 ### Frontend and UI
 - [X] React Vite TypeScript Tailwind frontend
-- [ ] 🚧 Create user stories and interface flow (Figma will be handled by [Polina](https://github.com/polinapianina))
+- [ ] 🚧 Create user stories and interface flow ([First Version of the Figma Prototype](https://www.figma.com/design/Mu2B9qZHKmGP7Fsc1AU9XL/NYC-Transit-Alert-App---Prototype?node-id=0-1&m=dev&t=lTr2CI8eD2u7VaO5-1))
 - [ ] Set up Tailwind Theme Config for consistent, modular design
   - [ ] Colors
   - [ ] Spacing
