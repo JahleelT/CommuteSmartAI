@@ -111,10 +111,11 @@ _This checklist is intended for internal development planning. For user-facing o
 - [X] Initialize `README.md`
   - [ ] Add badges
 - [ ] Initialize `LICENSE.md` (MIT or similar are recommended)
-- [ ] Create a `CONTRIBUTING.md`
+- [X] Initialize `CONTRIBUTING.md`
+  - [ ] Populate `CONTRIBUTING.md`
 - [ ] 🟡 Create feature roadmap (short and long term)
 - [ ] Add API usage guide in `README` or `/docs/`
-- [ ] Create `/docs/`
+- [X] Create `/docs/`
 - [ ] Add architecture diagram if helpful for contributors or a presentation
 - [ ] Add a changelog if there may be frequent versioning
 
