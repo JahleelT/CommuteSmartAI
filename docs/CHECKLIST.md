@@ -13,6 +13,7 @@ _This checklist is intended for internal development planning. For user-facing o
 
 ### Structural Setup
 - [ ] Finalize structure between mono-repo and frontend/backend
+- [ ] 🔜 Create PR template in `/.github/`
 
 ### Tooling and Dev Environment
 - [ ] Create `.gitignore`
@@ -25,7 +26,7 @@ _This checklist is intended for internal development planning. For user-facing o
 - [ ] Update main branch ruleset after implementing GitHub Actions
 
 ### Backend Architecture
-- [ ] Choose between Gin or Fiber golang framework for the backend
+- [X] Choose between Gin or Fiber golang framework for the backend
 - [ ] Define core API structure: `/chat`, `/routes`, `/models`, `/alerts`, etc.
 - [ ] Choose validation/router middleware for Gin or Fiber
 - [ ] Add rate limiting and request logging
@@ -73,8 +74,7 @@ _This checklist is intended for internal development planning. For user-facing o
 
 ### AI Integration Planning
 - [ ] APIs
-  - [ ] Google Maps API **OR** Mapbox API
-  - [ ] HERE Traffic API: To complement 511's data
+  - [X] Google Maps API 
   - [ ] MTA Real Time API: Subway Status and Bus info
   - [ ] NYC 511 API: Traffic Alerts and construction
   - [ ] NYC Open Data: Static datasets like stop locations
@@ -111,10 +111,11 @@ _This checklist is intended for internal development planning. For user-facing o
 - [X] Initialize `README.md`
   - [ ] Add badges
 - [ ] Initialize `LICENSE.md` (MIT or similar are recommended)
-- [ ] Create a `CONTRIBUTING.md`
+- [X] Initialize `CONTRIBUTING.md`
+  - [ ] Populate `CONTRIBUTING.md`
 - [ ] 🟡 Create feature roadmap (short and long term)
 - [ ] Add API usage guide in `README` or `/docs/`
-- [ ] Create `/docs/`
+- [X] Create `/docs/`
 - [ ] Add architecture diagram if helpful for contributors or a presentation
 - [ ] Add a changelog if there may be frequent versioning
 
