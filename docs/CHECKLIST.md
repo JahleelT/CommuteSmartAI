@@ -25,7 +25,7 @@ _This checklist is intended for internal development planning. For user-facing o
 - [ ] Update main branch ruleset after implementing GitHub Actions
 
 ### Backend Architecture
-- [ ] Choose between Gin or Fiber golang framework for the backend
+- [X] Choose between Gin or Fiber golang framework for the backend
 - [ ] Define core API structure: `/chat`, `/routes`, `/models`, `/alerts`, etc.
 - [ ] Choose validation/router middleware for Gin or Fiber
 - [ ] Add rate limiting and request logging
@@ -46,7 +46,8 @@ _This checklist is intended for internal development planning. For user-facing o
 
 ### Frontend and UI
 - [X] React Vite TypeScript Tailwind frontend
-- [ ] 🚧 Create user stories and interface flow (Figma will be handled by [Polina](https://github.com/polinapianina))
+- [ ] 🚧 Create user stories 
+- [X] Create interface flow (Figma will be handled by [Polina](https://github.com/polinapianina))
 - [ ] Set up Tailwind Theme Config for consistent, modular design
   - [ ] Colors
   - [ ] Spacing
@@ -73,8 +74,7 @@ _This checklist is intended for internal development planning. For user-facing o
 
 ### AI Integration Planning
 - [ ] APIs
-  - [ ] Google Maps API **OR** Mapbox API
-  - [ ] HERE Traffic API: To complement 511's data
+  - [X] Google Maps API 
   - [ ] MTA Real Time API: Subway Status and Bus info
   - [ ] NYC 511 API: Traffic Alerts and construction
   - [ ] NYC Open Data: Static datasets like stop locations
