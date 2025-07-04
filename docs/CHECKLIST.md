@@ -13,6 +13,7 @@ _This checklist is intended for internal development planning. For user-facing o
 
 ### Structural Setup
 - [ ] Finalize structure between mono-repo and frontend/backend
+- [ ] 🔜 Create PR template in `/.github/`
 
 ### Tooling and Dev Environment
 - [ ] Create `.gitignore`
