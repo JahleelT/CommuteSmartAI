@@ -16,9 +16,9 @@ _This checklist is intended for internal development planning. For user-facing o
 - [ ] 🔜 Create PR template in `/.github/`
 
 ### Tooling and Dev Environment
-- [ ] Create `.gitignore`
-  - [ ] Ensure `.env` is in this file
-- [ ] Create `.env` files
+- [X] Create `.gitignore`
+  - [X] Ensure `.env` is in this file
+- [X] Create `.env` files
   - [ ] Place MONGO_URI in `.env` files
 - [ ] Create `.nvmrc` to lock Node version across devs/environments
 - [ ] Set up ESLint + Prettier with shared config across frontend/backend
