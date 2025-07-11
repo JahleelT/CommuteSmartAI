@@ -75,13 +75,13 @@ _This checklist is intended for internal development planning. For user-facing o
 ### AI Integration Planning
 - [ ] APIs
   - [X] Google Maps API 
-  - [ ] MTA Real Time API: Subway Status and Bus info
+  - [X] MTA Real Time API: Subway Status and Bus info
   - [ ] NYC 511 API: Traffic Alerts and construction
-  - [ ] NYC Open Data: Static datasets like stop locations
-  - [ ] OpenWeatherMap API: Incorporate current forecasts and weather conditions
-  - [ ] Auth0 / Firebase Authentication
-  - [ ] 🟡 Hugging Face Inference API — For alternative open-source AI models (text, speech, or vision) that could complement OpenAI or Mistral (could be a great addition since Hugging Face is incredibly popular)
-  - [ ] Wit.ai or Dialogflow
+  - [ ] NYC Open Data: Static datasets like stop locations (LOOK INTO AGAIN LATER)
+  - [X] OpenWeatherMap API: Incorporate current forecasts and weather conditions
+  - [ ] Auth0 / Firebase Authentication (NOTE: Not an API, but a SaaS)
+  - [X] Wit.ai
+    - [ ] Set up intent cases (e.g. get_directions, check_status, find_nearest_station, etc)
 - [ ] Define AI use cases
 - [ ] Decide between OpenAI, Mistral, or another to implement
   - To decide, weigh cost, latency, and customization (though customization is probably of least concern)
