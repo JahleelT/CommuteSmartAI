@@ -15,13 +15,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Debug directory tree
+        run: |
+          echo "PWD: $(pwd)"
+          find . -name go.sum
+
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
           go-version: 1.22
-
-      - name: Confirm go.sum presence
-        run: ls -l backend/go.sum
 
       - name: Cache Go modules
         uses: actions/cache@v4
@@ -29,7 +31,7 @@ jobs:
           path: |
             ~/.cache/go-build
             ~/go/pkg/mod
-          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+          key: ${{ runner.os }}-go-${{ hashFiles('backend/go.sum') }}
           restore-keys: |
             ${{ runner.os }}-go-
 
@@ -38,3 +40,4 @@ jobs:
         
       - name: Placeholder build step
         run: echo "No real build yet, but go mod tidy succeeded!"
+        working-directory: backend
