@@ -1,0 +1,39 @@
+name: Docker Build & Push
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }} 
+          password: ${{ secrets.COMMUTESMART_DOCKERHUB_TOKEN }}
+
+      - name: Build and push frontend image
+        if: false
+        uses: docker/build-push-action@v4
+        with:
+          context: ./frontend
+          push: true
+          tags: jahleelt/commutesmart-frontend:latest
+
+      - name: Build and push backend image
+        if: false
+        uses: docker/build-push-action@v4
+        with:
+          context: ./backend
+          push: true
+          tags: jahleelt/commutesmart-backend:latest
