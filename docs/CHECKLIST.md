@@ -19,16 +19,16 @@ _This checklist is intended for internal development planning. For user-facing o
 - [X] Create `.gitignore`
   - [X] Ensure `.env` is in this file
 - [X] Create `.env` files
-  - [ ] Place MONGO_URI in `.env` files
+  - [X] Place MONGO_URI in `.env` files
 - [ ] Create `.nvmrc` to lock Node version across devs/environments
 - [ ] Set up ESLint + Prettier with shared config across frontend/backend
-- [ ] Set up Workflows and CI/CD Tools through GitHub Actions (?and Vite Test Runner?) 
+- [X] Set up Workflows and CI/CD Tools through GitHub Actions (?and Vite Test Runner?) 
 - [ ] Update main branch ruleset after implementing GitHub Actions
 
 ### Backend Architecture
 - [X] Choose between Gin or Fiber golang framework for the backend
 - [ ] Define core API structure: `/chat`, `/routes`, `/models`, `/alerts`, etc.
-- [ ] Choose validation/router middleware for Gin or Fiber
+- [ ] Choose validation/router middleware for Fiber
 - [ ] Add rate limiting and request logging
 - [ ] Secure API routes with auth if needed (token-based or session)
   - [ ] **If** session auth, implement JWT refresh tokens for session management
@@ -44,6 +44,21 @@ _This checklist is intended for internal development planning. For user-facing o
 - [ ] Handle reconnects / retries gracefully
 - [ ] Use structured JSON logs for easier parsing and monitoring
 - [ ] 🟡 Set up role-based access control (RBAC) if user roles evolve
+- [ ] ML Client (To be done in Python, using FastAPI. Uses the libraries of pandas, numpy, pyarrow for data; )
+  - [ ] Collect and store user search data (origin, destination, timestamp, mode)
+  - [ ] Add user_id tracking to associate searches with users (auth must be in place)
+  - [ ] Design schema for historical routing data (SQLite or Firestore)
+  - [ ] Create feature extraction pipeline (e.g., extract day of week, time block)
+  - [ ] Choose baseline ML model (start with Decision Tree or Logistic Regression)
+  - [ ] Train and evaluate local model on sample/mock data
+  - [ ] Store trained model weights or export as JSON or ONNX
+  - [ ] Integrate prediction logic into app startup flow
+  - [ ] Design predictive route suggestion component (UI mockup)
+  - [ ] Show suggested route(s) on home screen with option to confirm/use
+  - [ ] Add fallback logic if model returns low-confidence or empty prediction
+  - [ ] Add feedback buttons (👍/👎) to improve model iteratively
+  - [ ] Document ML pipeline and update README
+  - [ ] Train model with cron jobs or Airflow
 
 ### Frontend and UI
 - [X] React Vite TypeScript Tailwind frontend
@@ -53,7 +68,8 @@ _This checklist is intended for internal development planning. For user-facing o
   - [ ] Spacing
   - [ ] Fonts
   - [ ] Shadows
-- [ ] Plan for state management to manage real-time data (maybe redux)
+- [X] Plan for state management to manage real-time data (maybe redux)
+  - This will be completed through a mix of `useReducer` and Redux
 - [ ] Skeleton UI / Loading states for AI responses & API data to improve *perceived* performance
 - [ ] 🟡 Consider responsiveness for all platforms
 - [ ] Consider accessibility support (e.g., `aria-*`, `react-aria`, or `axe-core`)
@@ -77,14 +93,13 @@ _This checklist is intended for internal development planning. For user-facing o
   - [X] Google Maps API 
   - [X] MTA Real Time API: Subway Status and Bus info
   - [X] NYC 511 API: Traffic Alerts and construction
-  - [ ] NYC Open Data: Static datasets like stop locations (LOOK INTO AGAIN LATER)
+  - [ ] NYC Open Data: Static datasets like stop locations **(LOOK INTO AGAIN LATER)**
   - [X] OpenWeatherMap API: Incorporate current forecasts and weather conditions
   - [ ] Auth0 / Firebase Authentication (NOTE: Not an API, but a SaaS)
   - [X] Wit.ai  
     - [ ] Set up intent cases (e.g. get_directions, check_status, find_nearest_station, etc)
 - [ ] Define AI use cases
-- [ ] Decide between OpenAI, Mistral, or another to implement
-  - To decide, weigh cost, latency, and customization (though customization is probably of least concern)
+- [X] Decide between **OpenAI**, Mistral, or another to implement
 - [ ] Determine model hosting: hosted API vs self-hosted
 - [ ] Think through prompt security and input sanitation
 - [ ] Document AI prompt structure/format
@@ -96,23 +111,23 @@ _This checklist is intended for internal development planning. For user-facing o
 - [ ] Design a data sync/update strategy (some APIs are live, some are static but updated frequently)
 - [ ] Normalize data formats between APIs (MTA vs 511NY vs NYC Open Data)
 - [ ] Cache heavy / static data (via Redis or in-memory maps if in Go)
-- [ ] Establish `Dockerfile`, `docker-compose`, `.dockerignore`, and connect to Docker
-- [ ] Create a new cluster and connect to MongoDB
+- [X] Establish `Dockerfile`, `docker-compose`, `.dockerignore`, and connect to Docker
+- [X] Create a new cluster and connect to MongoDB
 
 ### Deployment and Monitoring
 - [ ] 🟡 Add a `render.yaml` for declarative deployments (since this will likely be deployed on render)
 - [ ] 🟡 Add health check endpoints for frontend and backend
 - [ ] Set up basic error monitoring (Sentry or console/error log route)
 - [ ] Add uptime monitoring (GitHub Actions ping)
-- [ ] Add basic startup/run instructions in `README.md` for local development
+- [X] Add basic startup/run instructions in `README.md` for local development
 - [ ] Add previews or dev URL links if hosted
   
 ### Docs and Community
 - [X] Initialize `README.md`
-  - [ ] Add badges
-- [ ] Initialize `LICENSE.md` (MIT or similar are recommended)
+  - [X] Add badges
+- [X] Initialize `LICENSE.md` (MIT or similar are recommended)
 - [X] Initialize `CONTRIBUTING.md`
-  - [ ] Populate `CONTRIBUTING.md`
+  - [X] Populate `CONTRIBUTING.md`
 - [ ] 🟡 Create feature roadmap (short and long term)
 - [ ] Add API usage guide in `README` or `/docs/`
 - [X] Create `/docs/`
@@ -121,3 +136,4 @@ _This checklist is intended for internal development planning. For user-facing o
 
 ### Down the Line
 - [ ] 🔜 **Later:** Consider bringing on more people in the future
+
