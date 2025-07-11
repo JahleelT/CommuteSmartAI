@@ -22,13 +22,16 @@ jobs:
         with:
           go-version: 1.22
 
+      - name: Confirm go.sum presence
+        run: ls -l backend/go.sum
+
       - name: Cache Go modules
         uses: actions/cache@v4
         with:
           path: |
             ~/.cache/go-build
             ~/go/pkg/mod
-          key: ${{ runner.os }}-go-${{ hashFiles('backend/go.sum') }}
+          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
           restore-keys: |
             ${{ runner.os }}-go-
 
