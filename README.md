@@ -1,5 +1,11 @@
 # CommuteSmartAI 🚍
 
+[![Workflow Name](https://github.com/JahleelT/CommuteSmartAI/actions/workflows/backend.yml/badge.svg)](https://github.com/JahleelT/CommuteSmartAI/actions/workflows/backend.yml)
+
+[![Workflow Name](https://github.com/JahleelT/CommuteSmartAI/actions/workflows/frontend.yml/badge.svg)](https://github.com/JahleelT/CommuteSmartAI/actions/workflows/frontend.yml)
+
+[![Workflow Name](https://github.com/JahleelT/CommuteSmartAI/actions/workflows/lint.yml/badge.svg)](https://github.com/JahleelT/CommuteSmartAI/actions/workflows/lint.yml)
+
 **CommuteSmartAI** is a modern, full-stack web application that aims to optimize and visualize the public transportation experience of New York City. This is accomplished by using real-time transit data and intelligent route suggestions. 
 
 Built with a **React + TypeScript Frontend**, a **Go Fiber Backend**, and various API integrations, the app aims to offer a fast, reliable, and intuitive experience for computers.
