@@ -13,3 +13,15 @@ services:
     build: ./backend
     ports: 
       - "8080:8080"
+    depends_on:
+      - ml-service
+
+  ml-service:
+    build:
+      context: ./ml
+    ports:
+      - "8002:8002"
+    environment:
+      - PYTHONPATH=/app
+    volumes:
+      - ./ml:/app

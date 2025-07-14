@@ -40,6 +40,14 @@ jobs:
           context: ./backend
           push: true
           tags: jahleelt/commutesmart-backend:latest
+      
+      - name: Build and push ml-service image
+        if: false  # Change to true or conditionally enable later
+        uses: docker/build-push-action@v4
+        with:
+          context: ./ml
+          push: true
+          tags: jahleelt/commutesmart-ml:latest
         
       - name: Final success message
         if: always()
