@@ -4,6 +4,8 @@
 
 [![Workflow Name](https://github.com/JahleelT/CommuteSmartAI/actions/workflows/frontend.yml/badge.svg)](https://github.com/JahleelT/CommuteSmartAI/actions/workflows/frontend.yml)
 
+![ML Service CI](https://github.com/JahleelT/CommuteSmartAI/actions/workflows/ml.yml/badge.svg)
+
 [![Workflow Name](https://github.com/JahleelT/CommuteSmartAI/actions/workflows/lint.yml/badge.svg)](https://github.com/JahleelT/CommuteSmartAI/actions/workflows/lint.yml)
 
 ![Docker Build & Push](https://github.com/JahleelT/CommuteSmartAI/actions/workflows/docker.yml/badge.svg)
