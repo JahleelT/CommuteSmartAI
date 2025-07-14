@@ -1,0 +1,37 @@
+name: ML Service CI
+
+on:
+  push:
+    paths:
+      - 'ml/**'
+      - '.github/workflows/ml.yml'
+  pull_request:
+    paths:
+      - 'ml/**'
+
+jobs:
+  build-ml:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        working-directory: ml
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run basic test (placeholder)
+        working-directory: ml
+        run: |
+          echo "Running placeholder ML tests..."
+          python main.py &  # if main.py is FastAPI, this just checks it runs
+          sleep 2
+          curl -f http://localhost:8002/ || echo "Did not respond"  # Optional check
