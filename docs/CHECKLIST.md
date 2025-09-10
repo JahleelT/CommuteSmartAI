@@ -10,6 +10,7 @@ _This checklist is intended for internal development planning. For user-facing o
 - 🟡 **Optional:** Used for items that have very low importance, can be skipped, but may be nice to implement
 - 🔜 **Later:** Used for items that will be done in the future, but can be ignored indefinitely
 - 🚧 **WIP:** Used for items that are actively under deployment
+- 🚨 **Urgent:** Used for items that should be done (almost) immediately
 
 ### Structural Setup
 - [ ] Finalize structure between mono-repo and frontend/backend
@@ -44,21 +45,21 @@ _This checklist is intended for internal development planning. For user-facing o
 - [ ] Handle reconnects / retries gracefully
 - [ ] Use structured JSON logs for easier parsing and monitoring
 - [ ] 🟡 Set up role-based access control (RBAC) if user roles evolve
-- [ ] ML Client (To be done in Python, using FastAPI. Uses the libraries of pandas, numpy, pyarrow for data; )
-  - [ ] Collect and store user search data (origin, destination, timestamp, mode)
-  - [ ] Add user_id tracking to associate searches with users (auth must be in place)
-  - [ ] Design schema for historical routing data (SQLite or Firestore)
-  - [ ] Create feature extraction pipeline (e.g., extract day of week, time block)
-  - [ ] Choose baseline ML model (start with Decision Tree or Logistic Regression)
-  - [ ] Train and evaluate local model on sample/mock data
-  - [ ] Store trained model weights or export as JSON or ONNX
-  - [ ] Integrate prediction logic into app startup flow
-  - [ ] Design predictive route suggestion component (UI mockup)
-  - [ ] Show suggested route(s) on home screen with option to confirm/use
-  - [ ] Add fallback logic if model returns low-confidence or empty prediction
-  - [ ] Add feedback buttons (👍/👎) to improve model iteratively
-  - [ ] Document ML pipeline and update README
-  - [ ] Train model with cron jobs or Airflow
+### ML Client (in Python)
+- [ ] Collect and store user search data (origin, destination, timestamp, mode)
+- [ ] Add user_id tracking to associate searches with users (auth must be in place)
+- [ ] Design schema for historical routing data (SQLite or Firestore)
+- [ ] Create feature extraction pipeline (e.g., extract day of week, time block)
+- [ ] Choose baseline ML model (start with Decision Tree or Logistic Regression)
+- [ ] Train and evaluate local model on sample/mock data
+- [ ] Store trained model weights or export as JSON or ONNX
+- [ ] Integrate prediction logic into app startup flow
+- [ ] Design predictive route suggestion component (UI mockup)
+- [ ] Show suggested route(s) on home screen with option to confirm/use
+- [ ] Add fallback logic if model returns low-confidence or empty prediction
+- [ ] Add feedback buttons (👍/👎) to improve model iteratively
+- [ ] Document ML pipeline and update README
+- [ ] Train model with cron jobs or Airflow
 
 ### Frontend and UI
 - [X] React Vite TypeScript Tailwind frontend
@@ -113,6 +114,7 @@ _This checklist is intended for internal development planning. For user-facing o
 - [ ] Cache heavy / static data (via Redis or in-memory maps if in Go)
 - [X] Establish `Dockerfile`, `docker-compose`, `.dockerignore`, and connect to Docker
 - [X] Create a new cluster and connect to MongoDB
+- [ ] 🚨 **REPLACE MONGODB WITH POSTGRESQL**
 
 ### Deployment and Monitoring
 - [ ] 🟡 Add a `render.yaml` for declarative deployments (since this will likely be deployed on render)
